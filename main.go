@@ -42,8 +42,8 @@ func sayhelloName(w http.ResponseWriter, r *http.Request) {
 			json.Unmarshal([]byte(string(body)), &dj)
 
 			fmt.Println("Pla " , dj[0].Username)
-	w.Write([]byte("Auf Platz 1. " +dj[0].Repo.Name +" von " + dj[0].Username +  " Platz 2. " +dj[1].Repo.Name +" von " + dj[1].Username + "und auf Platz 3. " +dj[2].Repo.Name +" von " + dj[2].Username+
-		". Platz 4 " +dj[3].Repo.Name +" von " + dj[4].Username + " und den Platz 5 belegt: "+dj[4].Repo.Name +" von " + dj[4].Username))
+	w.Write([]byte("Auf Platz 1 : " +dj[0].Repo.Name +" von " + dj[0].Username +  ". Platz 2: " +dj[1].Repo.Name +" von " + dj[1].Username + ". Und auf Platz 3. " +dj[2].Repo.Name +" von " + dj[2].Username+
+		". Platz 4 " +dj[3].Repo.Name +" von " + dj[4].Username + ". Und den Platz 5 belegt: "+dj[4].Repo.Name +" von " + dj[4].Username))
 
 }
 
