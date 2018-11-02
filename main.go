@@ -54,9 +54,16 @@ func gitlab(w http.ResponseWriter, r *http.Request) {
 
 }
 
+func bitbucket(w http.ResponseWriter, r *http.Request) {
+
+	w.Write([]byte("Auf Platz 1: Modeller Lib von teamirrelephant . Platz 2: app_chat_andoid_app von XcodeRoidX. Platz 3: Mi Repo von martinvilu"))
+
+}
+
 func main() {
 	http.HandleFunc("/github", github) // set router
 	http.HandleFunc("/gitlab", gitlab)
+	http.HandleFunc("/bitbucket", bitbucket)
 	err := http.ListenAndServe(":" +os.Getenv("PORT"), nil) // set listen port
 	if err != nil {
 		log.Fatal("ListenAndServe: ", err)
