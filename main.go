@@ -56,7 +56,7 @@ func gitlab(w http.ResponseWriter, r *http.Request) {
 
 func bitbucket(w http.ResponseWriter, r *http.Request) {
 
-	w.Write([]byte("Auf Platz 1: Modeller Lib von teamirrelephant . Platz 2: app chat andoid_app von XcodeRoidX. Platz 3: Mi Repo von martinvilu"))
+	w.Write([]byte("Auf Platz 1: Modeller Lib von teamirrelephant . Platz 2: app chat andoid app von XcodeRoidX. Platz 3: Mi Repo von martinvilu"))
 
 }
 
